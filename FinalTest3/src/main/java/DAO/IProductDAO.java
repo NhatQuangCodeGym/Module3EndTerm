@@ -10,13 +10,13 @@ public interface IProductDAO {
 
 
 
-    public Product selectProduct(String id);
+    public Product selectProduct(int id);
 
     public List<Product> selectAllProducts();
 
 
 
-    public boolean deleteProduct(String id) throws SQLException;
+    public boolean deleteProduct(int id) throws SQLException;
 
     public boolean updateProduct(Product product) throws SQLException;
 

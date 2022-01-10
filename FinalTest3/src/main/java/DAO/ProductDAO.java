@@ -37,7 +37,7 @@ public class ProductDAO implements IProductDAO {
 
 
     @Override
-    public  Product selectProduct(String id) {
+    public  Product selectProduct(int id) {
         String SELECT_PRODUCT_SQL_BY_ID = "SELECT productname, price, quantity, color, description, category " +
                 "FROM product WHERE id = ?;";
         Product product = null;
@@ -46,7 +46,7 @@ public class ProductDAO implements IProductDAO {
 
         try {
             PreparedStatement ps = connection.prepareStatement(SELECT_PRODUCT_SQL_BY_ID);
-            ps.setString(1, id);
+            ps.setInt(1, id);
             System.out.println(ps);
             ResultSet rs = ps.executeQuery();
 
@@ -98,15 +98,14 @@ public class ProductDAO implements IProductDAO {
         return products;    }
 
     @Override
-    public  boolean deleteProduct(String id) throws SQLException {
-        int newId = Integer.parseInt(id);
+    public  boolean deleteProduct(int id) throws SQLException {
         boolean check = false;
         String DELETE_PRODUCT_SQL = "DELETE FROM product WHERE id = ?";
         Connection connection = MySQLConnUtils.getConnection();
 
         try {
             PreparedStatement ps = connection.prepareStatement(DELETE_PRODUCT_SQL);
-            ps.setInt(1, newId);
+            ps.setInt(1, id);
             check = ps.executeUpdate() > 0;
         }catch (SQLException ex){
             printSQLException(ex);

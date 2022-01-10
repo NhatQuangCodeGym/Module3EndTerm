@@ -139,7 +139,7 @@ public class ProductServlet extends HttpServlet {
 
     private void showEditProduct(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
-        String id = request.getParameter("id");
+        int id = Integer.parseInt(request.getParameter("id"));
         Product existProduct = productDAO.selectProduct(id);
 
         if (existProduct == null) {
@@ -188,7 +188,7 @@ public class ProductServlet extends HttpServlet {
 
     private void showInfoProduct(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
-        String id = request.getParameter("id");
+        int id = Integer.parseInt(request.getParameter("id"));
         Product existProduct = productDAO.selectProduct(id);
 
         if (existProduct == null) {
@@ -222,7 +222,7 @@ public class ProductServlet extends HttpServlet {
 
     private void deleteProduct(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
-        String id = request.getParameter("id");
+        int id = Integer.parseInt(request.getParameter("id"));
 
         if (productDAO.selectProduct(id) == null) {
             listProduct(request, response);
