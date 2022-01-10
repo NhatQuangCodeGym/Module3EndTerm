@@ -38,7 +38,7 @@ public class ProductDAO implements IProductDAO {
 
     @Override
     public  Product selectProduct(int id) {
-        String SELECT_PRODUCT_SQL_BY_ID = "SELECT productname, price, quantity, color, description, category " +
+        String SELECT_PRODUCT_SQL_BY_ID = "SELECT id, productname, price, quantity, color, description, category " +
                 "FROM product WHERE id = ?;";
         Product product = null;
 

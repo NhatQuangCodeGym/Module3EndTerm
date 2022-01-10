@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>Title</title>
@@ -26,7 +28,7 @@
                 </c:if>
                 <div class="form-group col-12 col-sm-12 col-md-4">
                     <label>Name: </label>
-                    <input type="text" name="productname" class="form-control" id="productname" value="${product.getName()}" placeholder="Select the name">
+                    <input type="text" name="productname" class="form-control" id="productname" value="${product.getProductName()}" placeholder="Select the name">
                 </div>
                 <div class="form-group col-12 col-sm-12 col-md-4">
                     <label>Price: </label>
@@ -34,7 +36,7 @@
                 </div>
                 <div class="form-group col-12 col-sm-12 col-md-4">
                     <label>Quantity: </label>
-                    <input type="text" name="quantity" class="form-control" id="quantity" value="${quantity.getQuantity()}">
+                    <input type="text" name="quantity" class="form-control" id="quantity" value="${product.getQuantity()}">
                 </div>
                 <div class="form-group col-12 col-sm-12 col-md-4">
                     <label>Color: </label>
@@ -46,7 +48,7 @@
                 </div>
                 <div class="form-group col-12 col-sm-12 col-md-4">
                     <label>Category: </label>
-                    <select name="gender" class="form-control">
+                    <select name="category" class="form-control">
                         <c:choose>
                             <c:when test="${product.getCategory() == 1}">
                                 <option value="1" selected>Television</option>
