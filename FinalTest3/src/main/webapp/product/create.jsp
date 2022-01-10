@@ -1,70 +1,96 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: macbookprom1
-  Date: 10/01/2022
-  Time: 09:51
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Phần mềm quản lý điểm</title>
+<%--    <%@ include file="../layout/head.jsp"%>--%>
 </head>
-<body>
-<p>
-    <c:if test='${requestScope["message"] != null}'>
-        <span style="color:red; margin-left: 15px" class="message">${requestScope["message"]}</span>
-    </c:if>
-</p>
-<section class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <%--            Content here--%>
 
-            <form method="post" >
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+<%--    <%@ include file="../layout/header.jsp"%>--%>
+<%--    <%@ include file="../layout/sidebarleft.jsp"%>--%>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0 text-dark">Tạo sinh viên</h1>
+                    </div><!-- /.col -->
+                    <div class="col">
 
-                <label>Name: </label>
-                <input type="text" name="name" class="form-control" id="name" placeholder="Select the name">
-
-
-                <label>Price: </label>
-                <input type="text" name="price" class="form-control" id="price" >
-<%--                <select name="gender" class="form-control">--%>
-<%--                    <option value="1">Nam</option>--%>
-<%--                    <option value="0">Nữ</option>--%>
-<%--                </select>--%>
-
-
-                <label>Quantity: </label>
-                <input type="text" name="quantity" class="form-control" id="quantity" >
-
-
-                <label>Color: </label>
-                <input type="text" name="color" class="form-control" id="color" >
-
-
-                <label>Description: </label>
-                <input type="text" name="description" class="form-control" id="description" >
-
-
-                <label>Category: </label>
-                <select name="gender" class="form-control">
-                    <option value="1">Phone</option>
-                    <option value="0">Television</option>
-                </select>
-
-
-                <%--                            <div class="form-group col-12 col-sm-12 col-md-2">--%>
-                <%--                                <button type="submit" class="btn btn-primary" id="submit">Thêm mới</button>--%>
-                <%--                                <button type="submit" class="btn btn-primary" href="student">Quay lại</button>--%>
-                <%--                                <a href="#" class="btn btn-success" id="submit">Thêm mới</a>--%>
-                <%--                                <a href="#" class="btn btn-warning" href="student">Quay lại </a>--%>
-                <input type="submit" value="Thêm mới" class="btn btn-success" id="submit">
-                <a class="btn btn-warning" href="student">Quay lại </a>
-                <%--                            </div>--%>
-            </form>
+                    </div>
+                    <div class="col">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Dashboard v1</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
         </div>
+        <!-- Main content -->
+        <p>
+            <c:if test='${requestScope["message"] != null}'>
+                <span style="color:red; margin-left: 15px" class="message">${requestScope["message"]}</span>
+            </c:if>
+        </p>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <%--            Content here--%>
+
+                        <form method="post" >
+
+                            <label>Name: </label>
+                            <input type="text" name="productname" class="form-control" id="productnname" placeholder="Select the name">
+
+
+                            <label>Price: </label>
+                            <input type="text" name="price" class="form-control" id="price" >
+                            <%--                <select name="gender" class="form-control">--%>
+                            <%--                    <option value="1">Nam</option>--%>
+                            <%--                    <option value="0">Nữ</option>--%>
+                            <%--                </select>--%>
+
+
+                            <label>Quantity: </label>
+                            <input type="text" name="quantity" class="form-control" id="quantity" >
+
+
+                            <label>Color: </label>
+                            <input type="text" name="color" class="form-control" id="color" >
+
+
+                            <label>Description: </label>
+                            <input type="text" name="description" class="form-control" id="description" >
+
+
+                            <label>Category: </label>
+                            <select name="category" class="form-control">
+                                <option value="1">Phone</option>
+                                <option value="0">Television</option>
+                            </select>
+
+
+                            <%--                            <div class="form-group col-12 col-sm-12 col-md-2">--%>
+                            <%--                                <button type="submit" class="btn btn-primary" id="submit">Thêm mới</button>--%>
+                            <%--                                <button type="submit" class="btn btn-primary" href="student">Quay lại</button>--%>
+                            <%--                                <a href="#" class="btn btn-success" id="submit">Thêm mới</a>--%>
+                            <%--                                <a href="#" class="btn btn-warning" href="student">Quay lại </a>--%>
+                            <input type="submit" value="Thêm mới" class="btn btn-success" id="submit">
+                            <a class="btn btn-warning" href="student">Quay lại </a>
+                            <%--                            </div>--%>
+                        </form>
+                </div>
+            </div>
+        </section>
+        <!-- /.content-header -->
     </div>
-</section>
+<%--    <%@ include file="../layout/footer.jsp"%>--%>
+</div>
+
 </body>
+<%--<%@ include file="../layout/script.jsp"%>--%>
 </html>

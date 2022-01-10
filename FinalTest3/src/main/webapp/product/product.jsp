@@ -28,7 +28,7 @@
                     <table id="myTable" class="table table-colored-bordered table-bordered table-bordered-teal dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                         <thead>
                         <tr class="text-center">
-                            <th scope="col" >ID</th>
+                            <th scope="col" >#</th>
                             <th scope="col">Product Name</th>
                             <th scope="col">Price</th>
                             <th scope="col">Quantity</th>
@@ -52,16 +52,15 @@
 <%--                                </c:if>--%>
 
 
-                                <td>${instructor.getPrice()}</td>
-                                <td>${instructor.getQuantity()}</td>
-                                <td>${instructor.getColor()}</td>
-                                <td>${instructor.getDescription()}</td>
-                                <c:if test="${student.getCategory() == 1}">
+                                <td>${product.getPrice()}</td>
+                                <td>${product.getQuantity()}</td>
+                                <td>${product.getColor()}</td>
+                                <c:if test="${product.getCategory() == 1}">
                                     <td>
                                         <span class="badge badge-primary">Phone</span>
                                     </td>
                                 </c:if>
-                                <c:if test="${student.getCategory() == 0}">
+                                <c:if test="${product.getCategory() == 0}">
                                     <td>
                                         <span class="badge badge-danger">Television</span>
                                     </td>
