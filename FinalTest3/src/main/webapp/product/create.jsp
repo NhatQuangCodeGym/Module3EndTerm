@@ -16,14 +16,14 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Tạo sinh viên</h1>
+                        <h1 class="m-0 text-dark">Tạo sản phẩm</h1>
                     </div><!-- /.col -->
                     <div class="col">
 
                     </div>
                     <div class="col">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="">Home</a></li>
                             <li class="breadcrumb-item active">Dashboard v1</li>
                         </ol>
                     </div><!-- /.col -->
@@ -73,14 +73,8 @@
                                 <option value="0">Television</option>
                             </select>
 
-
-                            <%--                            <div class="form-group col-12 col-sm-12 col-md-2">--%>
-                            <%--                                <button type="submit" class="btn btn-primary" id="submit">Thêm mới</button>--%>
-                            <%--                                <button type="submit" class="btn btn-primary" href="student">Quay lại</button>--%>
-                            <%--                                <a href="#" class="btn btn-success" id="submit">Thêm mới</a>--%>
-                            <%--                                <a href="#" class="btn btn-warning" href="student">Quay lại </a>--%>
                             <input type="submit" value="Thêm mới" class="btn btn-success" id="submit">
-                            <a class="btn btn-warning" href="student">Quay lại </a>
+                            <a class="btn btn-warning" href="product">Quay lại </a>
                             <%--                            </div>--%>
                         </form>
                 </div>

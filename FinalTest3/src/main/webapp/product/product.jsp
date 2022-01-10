@@ -1,11 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: macbookprom1
-  Date: 10/01/2022
-  Time: 09:39
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
@@ -28,7 +22,7 @@
                     <table id="myTable" class="table table-colored-bordered table-bordered table-bordered-teal dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                         <thead>
                         <tr class="text-center">
-                            <th scope="col" >#</th>
+                            <th scope="col" >Id</th>
                             <th scope="col">Product Name</th>
                             <th scope="col">Price</th>
                             <th scope="col">Quantity</th>
@@ -38,20 +32,11 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach var="product" items="${requestScope['list']}">
+                        <c:forEach items="${requestScope['productList']}" var="product">
 
                             <tr class="text-center" >
-                                <td scope="row">${product.id}</td>
+                                <td scope="row">${product.getId()}</td>
                                 <td>${product.getProductName()}</td>
-
-<%--                                <c:if test="${product.getGender() == 1}">--%>
-<%--                                    <td>Nam</td>--%>
-<%--                                </c:if>--%>
-<%--                                <c:if test="${instructor.getGender() == 0}">--%>
-<%--                                    <td>Nữ</td>--%>
-<%--                                </c:if>--%>
-
-
                                 <td>${product.getPrice()}</td>
                                 <td>${product.getQuantity()}</td>
                                 <td>${product.getColor()}</td>
@@ -69,15 +54,15 @@
                                 <td>
                                     <a href="${pageContext.request.contextPath}/product?action=edit&id=${product.getId()}"
                                        title="Edit" class="btn-me" id="btn-edit">
-                                        <i class="fa fa-edit"></i>
+                                        edit
                                     </a>
                                     <a href="${pageContext.request.contextPath}/product?action=delete&id=${product.getId()}" title="Delete"
                                        class="btn-me delete" id="btn-trash">
-                                        <i class="fa fa-trash"></i>
+                                        delete
                                     </a>
                                     <a href="${pageContext.request.contextPath}/product?action=info&id=${product.getId()}"
                                        title="Information" class="btn-me">
-                                        <i class="fas fa-info-circle"></i>
+                                        information
                                     </a>
                                 </td>
 

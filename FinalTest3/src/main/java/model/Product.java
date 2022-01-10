@@ -28,6 +28,14 @@ public class Product {
         this.category = category;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getProductName() {
         return productName;
     }

@@ -91,12 +91,12 @@ public class ProductServlet extends HttpServlet {
 
     private void listProduct(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
-        List<Product> productlist = productDAO.selectAllProducts();
-        System.out.println(productlist.size());
+        List<Product> productList = productDAO.selectAllProducts();
+        System.out.println(productList.size());
         String check= request.getParameter("check");
         if (check!= null)
             request.setAttribute("check",check);
-        request.setAttribute("list", productlist);
+        request.setAttribute("productList", productList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/product/product.jsp");
         dispatcher.forward(request, response);
     }

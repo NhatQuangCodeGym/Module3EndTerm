@@ -11,11 +11,11 @@
     <title>Title</title>
 </head>
 <body>
-<p>
-    <c:if test='${requestScope["message"] != null}'>
-        <span style="color:red; margin-left: 15px" class="message">${requestScope["message"]}</span>
-    </c:if>
-</p>
+<%--<p>--%>
+<%--    <c:if test='${requestScope["message"] != null}'>--%>
+<%--        <span style="color:red; margin-left: 15px" class="message">${requestScope["message"]}</span>--%>
+<%--    </c:if>--%>
+<%--</p>--%>
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -31,18 +31,6 @@
                 <div class="form-group col-12 col-sm-12 col-md-4">
                     <label>Price: </label>
                     <input type="text" name="price" class="form-control" id="price" value="${product.getPrice()}">
-<%--                    <select name="gender" class="form-control">--%>
-<%--                        <c:choose>--%>
-<%--                            <c:when test="${instructor.getGender() == 1}">--%>
-<%--                                <option value="1" selected>Nam</option>--%>
-<%--                                <option value="0">Nữ</option>--%>
-<%--                            </c:when>--%>
-<%--                            <c:when test="${instructor.getGender() == 0}">--%>
-<%--                                <option value="1" >Nam</option>--%>
-<%--                                <option value="0 selected">Nữ</option>--%>
-<%--                            </c:when>--%>
-<%--                        </c:choose>--%>
-<%--                    </select>--%>
                 </div>
                 <div class="form-group col-12 col-sm-12 col-md-4">
                     <label>Quantity: </label>
