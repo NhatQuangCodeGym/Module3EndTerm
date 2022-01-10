@@ -210,11 +210,11 @@ public class ProductServlet extends HttpServlet {
             request.setAttribute("error", "This student is not on the list");
             request.setAttribute("warning", null);
 
-            request.setAttribute("listProduct", productList);
+            request.setAttribute("productList", productList);
             RequestDispatcher dispatcher = request.getRequestDispatcher("product/product.jsp");
             dispatcher.forward(request, response);
         } else {
-            request.setAttribute("listProduct", productList);
+            request.setAttribute("productList", productList);
             RequestDispatcher dispatcher = request.getRequestDispatcher("product/product.jsp");
             dispatcher.forward(request, response);
 
