@@ -204,6 +204,7 @@ public class ProductServlet extends HttpServlet {
             throws ServletException, SQLException, IOException {
         String str = request.getParameter("string-search");
         List<Product> productList = productDAO.searchProduct(str);
+        System.out.println(productList);
         if (productList == null) {
             request.setAttribute("success", null);
             request.setAttribute("error", "This student is not on the list");
@@ -216,6 +217,7 @@ public class ProductServlet extends HttpServlet {
             request.setAttribute("listProduct", productList);
             RequestDispatcher dispatcher = request.getRequestDispatcher("product/product.jsp");
             dispatcher.forward(request, response);
+
         }
     }
 

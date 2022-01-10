@@ -1,6 +1,6 @@
 package model;
 
-public class Product {
+public class Product<toString> {
     private int id;
     String productName;
     Float price;
@@ -82,5 +82,18 @@ public class Product {
 
     public void setCategory(int category) {
         this.category = category;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", productName='" + productName + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", color='" + color + '\'' +
+                ", description='" + description + '\'' +
+                ", category=" + category +
+                '}';
     }
 }
